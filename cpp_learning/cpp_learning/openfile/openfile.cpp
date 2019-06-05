@@ -25,10 +25,5 @@ int main(int argc, const char * argv[]) {
         cout<<s<<endl;
     }
     infile.close();
-    
-    cout << "test"<< endl;
-    cout << "pic" << endl;
-    cout << "funfuffufksdsd0" << endl;
-    cout << "jk" << endl;
     return 0;
 }
