@@ -3,18 +3,19 @@
 //  Created by fkxie on 2019/5/6.
 //  Copyright © 2019年 fkxie. All rights reserved.
 //
+#include "headfile.h"
 
-#include <iostream>
-#include <string>
-#include <fstream>
-#include <cassert>
-
-#define MAXPATH 80
+#define MAXPATH 200
 
 using namespace std;
 
 int main(int argc, const char * argv[]) {
-    string file="/Users/fkxie/Desktop/Directory/GAP/devel/POSCAR";
+    char cur_path[MAXPATH];
+    string file = "/Users/fkxie/Desktop/Directory/cpp/cpp_learning/cpp_learning/cpp_learning/openfile/POSCAR";
+    string pa = pwd();
+    
+    getcwd(cur_path, MAXPATH);   // get current path
+    
     fstream infile;
     infile.open(file.data());
     cout<<infile.is_open()<<endl;
@@ -22,11 +23,10 @@ int main(int argc, const char * argv[]) {
     string s;
     while (getline(infile, s))
     {
-        cout<<s<<endl;
+        if (s != "")
+            cout<<s<<endl;
     }
     infile.close();
-    
-    cout << "new change"<<endl;
-    cout << "new change2" << endl;
+    printf("current working directory is : %s \n", cur_path);
     return 0;
 }
