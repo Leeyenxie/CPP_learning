@@ -25,5 +25,8 @@ int main(int argc, const char * argv[]) {
         cout<<s<<endl;
     }
     infile.close();
+    
+    cout << "new change"<<endl;
+    
     return 0;
 }
