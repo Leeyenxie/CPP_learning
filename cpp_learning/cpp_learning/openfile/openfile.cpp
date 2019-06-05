@@ -7,8 +7,6 @@
 
 #define MAXPATH 200
 
-using namespace std;
-
 int main(int argc, const char * argv[]) {
     char cur_path[MAXPATH];
     string file = "/Users/fkxie/Desktop/Directory/cpp/cpp_learning/cpp_learning/cpp_learning/openfile/POSCAR";
